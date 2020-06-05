@@ -1,0 +1,253 @@
+@font-face { font-family: 'yg-jalnan'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration:none;
+}
+
+table {
+    border-spacing: 0;
+}
+
+fieldset,img {
+    border: 0;
+}
+
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-weight: normal;
+    font-style: normal;
+}
+
+strong{
+    font-weight: bold;
+}
+
+ol,ul {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+
+caption,th {
+    text-align: left;
+
+}
+
+q:before,q:after {
+    content:'';
+}
+
+abbr,acronym { 
+    border: 0;
+}
+
+* {
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'yg-jalnan';
+    font-weight: normal;
+    font-style: normal;
+}
+
+.section {
+    position: relative;
+    text-align: center;
+}
+
+#section-1 h2{
+    color: #fff;
+    font-size: 10em;
+    font-weight: 900;
+}
+
+#section-1 h1{
+    font-size: 2em;
+    font-weight: 100;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    margin: 1.5em auto 1em auto;
+    color: #35495e;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+#section-1 li {
+    display: inline-block;
+    margin: 1.25em 0.3em;
+}
+
+.section-1-button {
+    padding: 0.93em 1.87em;
+    background: #35495e;
+    border-radius: 5px;
+    display: block;
+    color: #fff;
+}
+
+h3 {
+    font-size: 5em;
+    text-align: center;
+    color: #fff;
+    font-family: 'yg-jalnan';
+    font-weight: normal;
+    font-style: normal;
+}
+
+h4 {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #fff;
+    font-weight: 100;
+    font-size: 25pt;
+}
+
+#logo{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    font-weight: bold;
+    z-index: 99;
+    font-size: 1.9em;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+}
+
+#menu-line {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 159px;
+    height: 2px;
+    background: #fff;
+}
+
+#menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 70;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    letter-spacing: 1px;
+    font-size: 1.1em;
+}
+
+#menu li {
+    display: inline-block;
+    margin: 10px 0px;
+    position: relative;
+}
+
+#menu a {
+    color: #fff;
+    padding: 0 1.1em 1.1em 1.1em;
+}
+
+#menu li.active a:after {
+    content: '';
+    margin: 0 1.1em 0 1.1em;
+    height: 2px;
+    background: #fff;
+    display: block;
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    right: 0;
+    display: block;
+}
+
+.actions {
+    position: fixed;
+    bottom: 2%;
+    margin: 0 auto;
+    z-index: 99;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.actions li {
+    display: inline-block;
+    margin: 0.3em 0.3em;
+}
+
+.actions-button {
+    padding: 0.73em 1.47em;
+    background: rgba(53, 73, 94, 0.47);
+    border-radius: 5px;
+    display: block;
+    color: #fff;
+    cursor: pointer;
+}
+
+.twitter-share i {
+    vertical-align: middle;
+    position: relative;
+    top: 2px;
+    display: inline-block;
+    width: 38px;
+    height: 14px;
+    color: white;
+    top: -4px;
+    left: -2px;
+    fill: #fff;
+}
+
+.twitter-share svg {
+    height: 40px;
+    margin-top: -10px;
+}
+
+.view-github {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 999;
+    display: block;
+    width: 4%;
+    height: auto;
+}
+
+.checkID {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+      color: #5C6EDA;
+    background-color: #fff;
+    border-color: #fff;
+    font-family: 'yg-jalnan';  
+    font-weight: normal; font-style: normal;
+    font-size: 25pt;
+    border: 0;
+    outline: 0;
+      display: inline-block;
+      line-height: normal;
+      vertical-align: middle;
+      cursor: pointer;
+    border-radius: .25em;
+    margin-top: 5%;
+}
+  
+.checkID:focus, .checkID:hover {
+      background-color: #515AC2;
+      color: #fff;
+}
+
+.full-width {
+    width: 25%;
+}
+  
+.has-padding {
+    padding: 11px 20px 11px 20px;
+}

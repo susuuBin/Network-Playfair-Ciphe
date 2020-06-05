@@ -1,0 +1,276 @@
+@font-face { font-family: 'yg-jalnan'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration:none;
+}
+
+table {
+    border-spacing: 0;
+}
+
+fieldset,img {
+    border: 0;
+}
+
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-weight: normal;
+    font-style: normal;
+}
+
+strong{
+    font-weight: bold;
+}
+
+ol,ul {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+
+caption,th {
+    text-align: left;
+
+}
+
+q:before,q:after {
+    content:'';
+}
+
+abbr,acronym { 
+    border: 0;
+}
+
+* {
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'yg-jalnan';
+    font-weight: normal;
+    font-style: normal;
+    background-color: #626BCD;
+}
+
+.section {
+    position: relative;
+    text-align: center;
+    margin-top: 10%;
+}
+
+#section-1 h2{
+    color: #fff;
+    font-size: 10em;
+    font-weight: 900;
+}
+
+#section-1 h1{
+    font-size: 2em;
+    font-weight: 100;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    margin: 1.5em auto 1em auto;
+    color: #35495e;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+#section-1 li {
+    display: inline-block;
+    margin: 1.25em 0.3em;
+}
+
+.section-1-button {
+    padding: 0.93em 1.87em;
+    background: #35495e;
+    border-radius: 5px;
+    display: block;
+    color: #fff;
+}
+
+h3 {
+    font-size: 5em;
+    text-align: center;
+    color: #fff;
+    font-family: 'yg-jalnan';
+    font-weight: normal;
+    font-style: normal;
+}
+
+h4 {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #fff;
+    font-weight: 100;
+    font-size: 25pt;
+}
+
+.view-github {
+    position: fixed;
+    top: 40px;
+    left: 40px;
+    z-index: 999;
+    display: block;
+    width: 4%;
+    height: auto;
+}
+
+.checkID {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+      color: #5C6EDA;
+    background-color: #fff;
+    border-color: #fff;
+    font-family: 'yg-jalnan';  
+    font-weight: normal; font-style: normal;
+    font-size: 25pt;
+    border: 0;
+    outline: 0;
+      display: inline-block;
+      line-height: normal;
+      vertical-align: middle;
+      cursor: pointer;
+    border-radius: .25em;
+    margin-top: 5%;
+}
+  
+.checkID:focus, .checkID:hover {
+      background-color: #515AC2;
+      color: #fff;
+}
+
+.full-width {
+    width: 80%;
+}
+  
+.has-padding {
+    padding: 11px 20px 11px 20px;
+}
+
+.box {
+	position: relative;
+	margin: auto;
+    top: 40px;
+	left: 0;
+	z-index: 200;
+	right: 0;
+    width: 55%;
+    height: auto;
+	border-radius: 15px;
+	background: #FFF;
+    margin-bottom: 100px;
+    overflow: hidden;
+}
+
+.fieldset {
+    position: relative;
+    margin: 1.4em 0;
+    font-family: 'Noto Sans KR', sans-serif; 
+    font-size: 15pt;
+    font-weight: 100;
+}
+  
+.fieldset:first-child {
+    margin-top: 5%;
+    font-family: 'Noto Sans KR', sans-serif; 
+    font-size: 15pt;
+    font-weight: 100;
+}
+
+.fieldset:last-child {
+    margin-bottom: 0;
+    font-family: 'yg-jalnan';
+    font-weight: normal; 
+    font-style: normal;
+}
+  
+label {
+    font-family: 'Noto Sans KR', sans-serif; 
+    font-size: 15pt;
+    font-weight: 100;
+}
+
+input {
+    margin: 0;
+    padding: 0;
+    border-radius: 0.25em;
+    font-family: 'Noto Sans KR', sans-serif; 
+    font-size: 15pt;
+    font-weight: 100;
+}
+
+.has-border {
+    border: 1px solid #d2d8d8;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+
+.has-border:focus {
+    border-color: #343642;
+    box-shadow: 0 0 5px rgba(52, 54, 66, 0.1);
+    outline: none;
+}
+
+table, td, th {  
+    text-align: center;
+    font-family: 'Noto Sans KR', sans-serif; 
+    font-size: 15pt;
+    font-weight: 300;
+    border: 1px solid #d2d8d8;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    border-radius: 0.25em;
+}
+  
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+th, td {
+    padding: 15px;
+}
+
+.startBtn {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+      color: #fff;
+    background-color: #5C6EDA;
+    border-color: #5C6EDA;
+    font-family: 'yg-jalnan';  
+    font-weight: normal; font-style: normal;
+    font-size: 25pt;
+    border: 0;
+    outline: 0;
+      display: inline-block;
+      line-height: normal;
+      vertical-align: middle;
+      cursor: pointer;
+    border-radius: .25em;
+    margin-top: 5%;
+}
+  
+.startBtn:focus, .startBtn:hover {
+      background-color: #515AC2;
+      color: #fff;
+}

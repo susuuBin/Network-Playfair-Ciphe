@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title> 쉿! 비밀이야 </title>
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/index.css">
+        <!-- FONTS -->
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&display=swap" rel="stylesheet">
+    </head>
+    <body translate="no">
+        <link rel="stylesheet" type="text/css" href="css/fullpage.min.css">
+            <div id="app">
+                <full-page :options="options" id="fullpage" ref="fullpage">
+                    <div class="section first">
+                        <h3> 쉿! 비밀이야 </h3>
+                        <h4 style="margin-top: 2%;"> 서로 간의 비밀 메시지를 나누고 싶은 사람들을 위한</h4>
+                        <h4 style="font-weight: 400;"> 다중 문자 치환 암호화 프로그램 </h4> 
+                        <input class="checkID full-width has-padding" type="button" value="시작해 보기" onClick="location.href='cipher.html'"> 
+                    </div>
+                    <div class="section">
+                        <div class="slide">
+                            <h3> 다중 문자 치환이란? </h3>
+                        </div>
+                        <div class="slide">
+                            <h3> Slide 2.2 </h3>
+                        </div>
+                    </div>
+                </full-page>
+            <img class="view-github" src="image/github.png" onclick="location.href='https://github.com/susuuBin';" style="cursor: pointer;">
+            </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
+        <script src="https://unpkg.com/vue-fullpage.js/dist/vue-fullpage.js"></script>
+        <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>
