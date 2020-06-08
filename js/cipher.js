@@ -35,7 +35,7 @@ function init() {
             plainText = plainText.substring(0, i) + 'q' + plainText.substring(i + 1, plainText.length);
         }
     }
-    
+
     encryption = playfairCipher(key, plainText);
 
     /* 암호문을 출력해 준다. */
@@ -57,7 +57,7 @@ function init() {
             }
         }
     }
-    
+
     /* 복호문을 출력해 준다. */
     document.getElementById("decryText").value = decryption;
     return false;
@@ -101,7 +101,7 @@ function playfairCipher(key, plainText){
                 }
             }
         }
-        
+
         if(x1==x2) { 
             tmp[0] = board[x1][(y1+1)%5];
             tmp[1] = board[x2][(y2+1)%5];
@@ -115,7 +115,7 @@ function playfairCipher(key, plainText){
 
         encArr.push(tmp);
     }
-    
+
     for(var i=0; i<encArr.length; i++) {
         encResult += encArr[i][0]+encArr[i][1]+" ";
     }
@@ -128,7 +128,7 @@ function DoubleDecryption(key, enStr) {
     var decArr = []; 
     var x1=0 , x2=0 , y1=0, y2=0; 
     var decResult = "";
-    
+
     for(var i=0; i<enStr.length; i++) {
         var twoWord = [];
         twoWord[0] = enStr.charAt(i);
@@ -151,7 +151,7 @@ function DoubleDecryption(key, enStr) {
                 }
             }
         }
-        
+
         if(x1==x2) { 
             tmp[0] = board[x1][(y1+4)%5];
             tmp[1] = board[x2][(y2+4)%5];
@@ -164,7 +164,7 @@ function DoubleDecryption(key, enStr) {
         }
         decArr.push(tmp);
     }
-    
+
     for(var i=0; i<decArr.length; i++) { 
         if(i != decArr.length-1 && decArr[i][1]=='x' && decArr[i][0]==decArr[i+1][0]) {	
             decResult += decArr[i][0];
@@ -216,4 +216,32 @@ function setBoard(alphabetKey) {
     }
 
     return false;
-}
+} 
+
+/* Caps Lock 감지 */
+var input = document.getElementById("key");
+var inputText = document.getElementById("plainText");
+
+input.addEventListener("keyup", function(event) {
+    if (event.getModifierState("CapsLock")) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Caps Lock',
+            text: '입력을 하실 때에는, Caps Lock 키를 풀고 해 주시길 바랍니다.',
+            confirmButtonColor: "#626BCD",
+            confirmButtonText: '돌아가기'
+        });
+    }
+});
+
+inputText.addEventListener("keyup", function(event) {
+    if (event.getModifierState("CapsLock")) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Caps Lock',
+            text: '입력을 하실 때에는, Caps Lock 키를 풀고 해 주시길 바랍니다.',
+            confirmButtonColor: "#626BCD",
+            confirmButtonText: '돌아가기'
+        });
+    }
+});

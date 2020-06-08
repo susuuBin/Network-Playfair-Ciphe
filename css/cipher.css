@@ -4,6 +4,7 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
 form,fieldset,input,textarea,p,blockquote,th,td {
     padding: 0;
     margin: 0;
+    text-transform: uppercase;
 }
 
 a {
@@ -53,10 +54,17 @@ abbr,acronym {
 }
 
 body {
-    font-family: 'yg-jalnan';
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
     background-color: #626BCD;
+}
+
+h1, .h1,
+h2, .h2 {
+  font-size: 2.5rem;
+  font-family: 'yg-jalnan';
+  font-weight: normal; font-style: normal;
+  color: #282828;
 }
 
 .section {
@@ -150,6 +158,10 @@ h4 {
 
 .full-width {
     width: 80%;
+}
+
+.full-width-btn {
+    width: 38%;
 }
   
 .has-padding {
