@@ -63,6 +63,7 @@ function init() {
     return false;
 }
 
+/* 암호화 하는 부분 */
 function playfairCipher(key, plainText){
     var arr = [];
     var encArr = [];
@@ -71,6 +72,7 @@ function playfairCipher(key, plainText){
 
     document.getElementById("playFair").value = "";
 
+    /* 글이 반복되면 x 문자를 추가해 준다 */
     for(var i = 0; i < plainText.length; i++) { 
         var twoWord = [];
         twoWord[0] = plainText.charAt(i);
@@ -86,11 +88,12 @@ function playfairCipher(key, plainText){
         document.getElementById("playFair").value += twoWord[0] + twoWord[1] + " ";
     }
 
-    for(var i=0; i<arr.length; i++) {
+    /* 쌍자 암호의 각각 위치를 확인해 준다 */
+    for(var i = 0; i < arr.length; i++) {
         var tmp = [];
 
-        for(var j=0; j<board.length; j++) { 
-            for(var k=0; k<board[j].length; k++) {
+        for(var j = 0; j < board.length; j++) { 
+            for(var k = 0; k<board[j].length; k++) {
                 if(board[j][k] == arr[i][0]) {
                     x1 = j;
                     y1 = k;
@@ -102,12 +105,15 @@ function playfairCipher(key, plainText){
             }
         }
 
-        if(x1==x2) { 
+        /* 행이 같은 경우 */
+        if(x1 == x2) { 
             tmp[0] = board[x1][(y1+1)%5];
             tmp[1] = board[x2][(y2+1)%5];
+        /* 열이 같은 경우 */
         } else if(y1==y2) {
             tmp[0] = board[(x1+1)%5][y1];
             tmp[1] = board[(x2+1)%5][y2];
+        /* 행과 열이 모두 다른 경우 */
         } else { 
             tmp[0] = board[x2][y1];
             tmp[1] = board[x1][y2];
@@ -116,31 +122,34 @@ function playfairCipher(key, plainText){
         encArr.push(tmp);
     }
 
-    for(var i=0; i<encArr.length; i++) {
-        encResult += encArr[i][0]+encArr[i][1]+" ";
+    for(var i = 0; i < encArr.length; i++) {
+        encResult += encArr[i][0] + encArr[i][1]+" ";
     }
 
     return encResult;
 }
 
 function DoubleDecryption(key, enStr) {
+    /* 바꾸기 전의 쌍자 암호를 저장할 변수를 선언해 준다 */
     var arr = []; 
+    /* 바꾼 후의 쌍자 암호를 저장할 변수를 선언해 준다 */
     var decArr = []; 
-    var x1=0 , x2=0 , y1=0, y2=0; 
+    /* 쌍자 암호 두 글자 각각의 행과 열의 값을 저장할 변수를 선언해 준다 */
+    var x1 = 0 , x2 = 0 , y1=0, y2=0; 
     var decResult = "";
 
-    for(var i=0; i<enStr.length; i++) {
+    for(var i = 0; i < enStr.length; i++) {
         var twoWord = [];
         twoWord[0] = enStr.charAt(i);
         twoWord[1] = enStr.charAt(++i);
         arr.push(twoWord);
     }
 
-    for(var i=0; i<arr.length; i++) {
+    for(var i = 0; i < arr.length; i++) {
     var tmp = [];
 
-        for(var j=0; j<board.length; j++) {
-            for(var k=0 ; k<board[j].length; k++)  {
+        for(var j = 0; j < board.length; j++) {
+            for(var k = 0 ; k < board[j].length; k++)  {
                 if(board[j][k] == arr[i][0]) {
                     x1 = j;
                     y1 = k;
@@ -152,12 +161,12 @@ function DoubleDecryption(key, enStr) {
             }
         }
 
-        if(x1==x2) { 
-            tmp[0] = board[x1][(y1+4)%5];
-            tmp[1] = board[x2][(y2+4)%5];
+        if(x1 == x2) { 
+            tmp[0] = board[x1][(y1 + 4) % 5];
+            tmp[1] = board[x2][(y2 + 4) % 5];
         } else if(y1==y2) {
-            tmp[0] = board[(x1+4)%5][y1];
-            tmp[1] = board[(x2+4)%5][y2];
+            tmp[0] = board[(x1 + 4) % 5][y1];
+            tmp[1] = board[(x2 + 4) % 5][y2];
         } else { 
             tmp[0] = board[x2][y1];
             tmp[1] = board[x1][y2];
@@ -165,19 +174,21 @@ function DoubleDecryption(key, enStr) {
         decArr.push(tmp);
     }
 
-    for(var i=0; i<decArr.length; i++) { 
-        if(i != decArr.length-1 && decArr[i][1]=='x' && decArr[i][0]==decArr[i+1][0]) {	
+    for(var i = 0; i < decArr.length; i++) { 
+        if(i != decArr.length - 1 && decArr[i][1] == 'x' && decArr[i][0] == decArr[i + 1][0]) {	
             decResult += decArr[i][0];
-        } else if(i == decArr.length-1 && decArr[i][1]=='x') {
+        } else if(i == decArr.length - 1 && decArr[i][1] == 'x') {
             decResult += decArr[i][0];
         } else {
             decResult += decArr[i][0]+decArr[i][1];
         }
     }
-    for(var i=0; i<zCheck.length; i++) {
-        for(var j=0; j<decResult.length; j++) {
+
+    /* z 위치를 찾아서 q 로 돌려 놓는다 */
+    for(var i = 0; i < zCheck.length; i++) {
+        for(var j = 0; j < decResult.length; j++) {
             if(zCheck[i] == j) {
-                decResult = decResult.substring(0, j) + "z" + decResult.substring(j+1, decResult.length);
+                decResult = decResult.substring(0, j) + "z" + decResult.substring(j + 1, decResult.length);
             }
         }
     }
